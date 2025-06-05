@@ -78,6 +78,31 @@
     flex: 1;
   }
 </style>
+  <style>
+/* Reduce spacing between paragraphs inside list items */
+li > p {
+  margin-top: 0;
+  margin-bottom: 0.4em;
+}
+
+/* Tighter spacing between nested lists */
+li > ol, li > ul {
+  margin-top: 0.2em;
+  margin-bottom: 0.2em;
+}
+
+/* Optional: tighten top/bottom margins on lists */
+ol, ul {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  padding-left: 1.5em;
+}
+
+/* Optional: improve item alignment */
+li {
+  margin-left: 0.5em;
+}
+</style>
 </head>
 <body>
 <div class="ltx_page_main">
