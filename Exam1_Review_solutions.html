@@ -8,42 +8,41 @@
 <link rel="stylesheet" href="ltx-article.css" type="text/css">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+ <meta charset="UTF-8">
+  <title>Centered Figure Example</title>
   <style>
-  .container {
-    display: flex;
-    align-items: flex-start;
-    gap: 1.5em;
-    max-width: 1000px;
-    margin: 2em auto;
-    font-family: sans-serif;
-  }
+    body {
+      font-family: sans-serif;
+      max-width: 800px;
+      margin: 2em auto;
+      padding: 1em;
+      line-height: 1.6;
+      background-color: #f9f9f9;
+    }
 
-  .text-content {
-    flex: 1;
-    font-size: 1em;
-  }
+    .centered-figure {
+      background-color: #fff;
+      padding: 1em;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      max-width: 600px;
+      margin: 2em auto;
+      text-align: center;
+    }
 
-  figure {
-    background-color: #fff;
-    padding: 1em;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    border-radius: 8px;
-    max-width: 300px;
-    margin: 0;
-  }
+    .centered-figure img {
+      width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
 
-  figcaption {
-    margin-top: 0.5em;
-    font-size: 0.85em;
-    color: #555;
-  }
-
-  img {
-    width: 100%;
-    height: auto;
-    display: block;
-  }
-</style>
+    .centered-figure figcaption {
+      margin-top: 0.5em;
+      font-size: 0.9em;
+      color: #555;
+    }
+  </style>
 </head>
 <body>
 <div class="ltx_page_main">
@@ -999,14 +998,12 @@ t=t^{3}\Rightarrow t(t^{2}-4)=0\Rightarrow t=0,t=\pm 2" display="block"><mrow><m
 <td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
 </tr></tbody>
 </table>
- <div class="page-wrapper">
-    <figure class="centered-figure">
-  <img src="circle_for_review.jpg" alt="Circle centered at (1,0) with a radius of 1">
-  <figcaption data-caption="Circle centered at (1,0) with a radius of 1"></figcaption>
-</figure>
-  </div>
+<figure class="centered-figure">
+    <img src="circle_for_Review.jpg" alt="Cirlce centered at (1,0) with radius 1">
+    <figcaption data-caption="Cirlce centered at (1,0) with radius 1."></figcaption>
+  </figure>
 
-  <script>
+   <script>
     document.addEventListener("DOMContentLoaded", () => {
       const figures = document.querySelectorAll("figure");
       figures.forEach((figure, index) => {
