@@ -1094,5 +1094,15 @@ t=t^{3}\Rightarrow t(t^{2}-4)=0\Rightarrow t=0,t=\pm 2" display="block"><mrow><m
       });
     });
   </script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const figures = document.querySelectorAll("figure");
+      figures.forEach((figure, index) => {
+        const caption = figure.querySelector("figcaption");
+        const captionText = caption.getAttribute("data-caption") || "";
+        caption.textContent = `Figure ${index + 1}. ${captionText}`;
+      });
+    });
+  </script>
 </body>
 </html>
