@@ -999,16 +999,29 @@ t=t^{3}\Rightarrow t(t^{2}-4)=0\Rightarrow t=0,t=\pm 2" display="block"><mrow><m
 <td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
 </tr></tbody>
 </table>
-  <div class="container">
-  <div class="text-content">
-    <p>This text explains or references the image shown on the right. You can write anything you like here. The image will stay to the side.</p>
+ <div class="page-wrapper">
+    <div class="container">
+      <div class="text-content">
+        <p>Your text goes here...</p>
+      </div>
+
+      <figure>
+        <img src="circle_for_review.jpg" alt="Circle centered at the point (1,0) with a radius of 1">
+        <figcaption data-caption="..."></figcaption>
+      </figure>
+    </div>
   </div>
 
-  <figure>
-    <img src="cirlce_for_review.jpg" alt="Circle centered at the point (1,0) with a radius of 1">
-    <figcaption data-caption="Circle centered at the point (1,0) with a radius of 1."></figcaption>
-  </figure>
-</div>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const figures = document.querySelectorAll("figure");
+      figures.forEach((figure, index) => {
+        const caption = figure.querySelector("figcaption");
+        const captionText = caption.getAttribute("data-caption") || "";
+        caption.textContent = `Figure ${index + 1}. ${captionText}`;
+      });
+    });
+  </script>
 </div>
 <div id="S0.I1.i10.p2" class="ltx_para">
 <p class="ltx_p">In polar coordinates:</p>
